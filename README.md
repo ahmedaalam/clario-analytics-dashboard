@@ -12,30 +12,30 @@ A minimal, production-grade SaaS analytics dashboard inspired by Stripe, Linear,
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | React 19 + Vite 8 |
-| Animations | GSAP (page fade-in, number counters) |
-| Smooth Scroll | Lenis |
-| Charts | Chart.js + react-chartjs-2 |
-| Icons | Lucide React |
-| Styling | Vanilla CSS with custom design tokens |
-| Fonts | Inter + JetBrains Mono (Google Fonts) |
+| Layer         | Technology                            |
+| ------------- | ------------------------------------- |
+| Framework     | React 19 + Vite 8                     |
+| Animations    | GSAP (page fade-in, number counters)  |
+| Smooth Scroll | Lenis                                 |
+| Charts        | Chart.js + react-chartjs-2            |
+| Icons         | Lucide React                          |
+| Styling       | Vanilla CSS with custom design tokens |
+| Fonts         | Inter + JetBrains Mono (Google Fonts) |
 
 ---
 
 ## Pages
 
-| Page | Route Key | Description |
-|---|---|---|
-| Overview | `dashboard` | 4 KPI cards, revenue trajectory line chart, recent activity feed |
-| Analytics | `analytics` | Single retention/growth chart with Today / Week / Month filter |
-| Reports | `reports` | Scheduled exports — CSV, PDF, JSON — with download actions |
-| Billing | `billing` | Stripe-inspired pricing cards (Starter, Pro, Enterprise) with monthly/annual toggle |
-| Users | `users` | Team roster with roles, 2FA status, and member management |
-| Projects | `projects` | Microservice telemetry cards — latency, uptime SLA, deployment branch |
-| Activity Logs | `activity` | Immutable audit trail of security, billing, and deploy events |
-| Settings | `settings` | Profile info, masked API key with copy, and Dark / Light theme selector |
+| Page          | Route Key   | Description                                                                         |
+| ------------- | ----------- | ----------------------------------------------------------------------------------- |
+| Overview      | `dashboard` | 4 KPI cards, revenue trajectory line chart, recent activity feed                    |
+| Analytics     | `analytics` | Single retention/growth chart with Today / Week / Month filter                      |
+| Reports       | `reports`   | Scheduled exports — CSV, PDF, JSON — with download actions                          |
+| Billing       | `billing`   | Stripe-inspired pricing cards (Starter, Pro, Enterprise) with monthly/annual toggle |
+| Users         | `users`     | Team roster with roles, 2FA status, and member management                           |
+| Projects      | `projects`  | Microservice telemetry cards — latency, uptime SLA, deployment branch               |
+| Activity Logs | `activity`  | Immutable audit trail of security, billing, and deploy events                       |
+| Settings      | `settings`  | Profile info, masked API key with copy, and Dark / Light theme selector             |
 
 ---
 
@@ -89,24 +89,3 @@ src/
     ├── tokens.css             # Color palette, radii, transitions, spacing tokens
     └── global.css             # Base reset, layout, buttons, responsive utilities
 ```
-
----
-
-## Design Principles
-
-- **Zero gradients, zero glow** — flat surfaces and 1px opacity borders only
-- **Single accent color** — muted indigo/blue (`#4f7cff`) used sparingly
-- **Inter only** — 400, 500, 600 weights with a strict H1 > H2 > body hierarchy
-- **Generous whitespace** — every element earns its place
-- **Dark + Light mode** — toggled from the top-right navbar button, persisted to `localStorage`
-
----
-
-## Responsive Breakpoints
-
-| Breakpoint | Behavior |
-|---|---|
-| `> 1024px` | Full sidebar (220px) + multi-column grids |
-| `768px – 1024px` | Sidebar collapsible, 2-column layouts |
-| `< 768px` | Sidebar becomes off-canvas slide-in drawer (hamburger trigger) |
-| `< 480px` | Single-column, compact spacing, labels truncated gracefully |
