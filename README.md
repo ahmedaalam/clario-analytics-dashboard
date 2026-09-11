@@ -1,4 +1,4 @@
-# Clario — SaaS Analytics Platform
+# Clario — SaaS Analytics Dashboard
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=flat-square&logo=vercel)](https://clario-analytics-dashboard.vercel.app/) [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev) [![Vite](https://img.shields.io/badge/Vite-8-646cff?style=flat-square&logo=vite)](https://vitejs.dev)
 
