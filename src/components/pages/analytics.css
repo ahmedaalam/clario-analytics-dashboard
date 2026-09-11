@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Minimal Analytics Styling (Responsive)
+   ========================================================================== */
+
+.analytics-chart-card {
+  padding: 28px;
+}
+
+.analytics-summary-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  gap: 12px;
+}
+
+.analytics-stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.analytics-stat-value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.analytics-stat-diff {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.analytics-canvas-box {
+  height: 380px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .analytics-chart-card {
+    padding: 18px;
+  }
+  .analytics-canvas-box {
+    height: 280px;
+  }
+  .analytics-stat-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-chart-card {
+    padding: 14px;
+  }
+  .analytics-canvas-box {
+    height: 220px;
+  }
+  .analytics-summary-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

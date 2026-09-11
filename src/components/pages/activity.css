@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Minimal Activity Logs Styling (Responsive)
+   ========================================================================== */
+
+.logs-table-card {
+  padding: 8px 0;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color var(--transition-fast);
+  gap: 16px;
+}
+
+.log-row:last-child {
+  border-bottom: none;
+}
+
+.log-row:hover {
+  background-color: var(--bg-hover);
+}
+
+.log-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.log-event-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.log-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.log-category-pill {
+  color: var(--text-secondary);
+}
+
+.log-right-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.log-status-pill {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.log-status-pill.success {
+  color: var(--success);
+  background: var(--success-subtle);
+  border-color: transparent;
+}
+
+.log-status-pill.blocked {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+  border-color: transparent;
+}
+
+.log-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .log-row {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+  .log-main-col {
+    width: 100%;
+  }
+  .log-right-col {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .log-event-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .log-row {
+    padding: 12px;
+  }
+  .log-meta-row span:nth-child(3),
+  .log-meta-row span:nth-child(4),
+  .log-meta-row span:nth-child(5) {
+    display: none;
+  }
+}

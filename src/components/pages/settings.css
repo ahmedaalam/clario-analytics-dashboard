@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Minimal Settings Styling (Responsive)
+   ========================================================================== */
+
+.settings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-section {
+  padding: 28px;
+}
+
+.settings-section-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-section-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Profile Form */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-grid .full-width {
+  grid-column: span 2;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+/* API Key Box */
+.api-key-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.api-key-text {
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-copy {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* Theme Options */
+.theme-options-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.theme-select-card {
+  padding: 16px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  transition: border-color var(--transition-fast);
+}
+
+.theme-select-card:hover {
+  border-color: var(--border-hover);
+}
+
+.theme-select-card.selected {
+  border-color: var(--primary);
+  background-color: var(--bg-card);
+}
+
+.theme-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  border: 1px solid var(--border-default);
+}
+
+.dark-circle {
+  background: #0b0c0e;
+}
+
+.light-circle {
+  background: #fafafa;
+}
+
+.theme-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.theme-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.theme-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .settings-section {
+    padding: 20px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .form-grid .full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .theme-options-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .theme-sub {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-section {
+    padding: 16px;
+  }
+  .api-key-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn-copy {
+    width: 100%;
+    justify-content: center;
+  }
+}

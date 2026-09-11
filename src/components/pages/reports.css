@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Minimal Reports Styling (Responsive)
+   ========================================================================== */
+
+.reports-table-card {
+  padding: 8px 0;
+}
+
+.reports-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color var(--transition-fast);
+  gap: 16px;
+}
+
+.report-row:last-child {
+  border-bottom: none;
+}
+
+.report-row:hover {
+  background-color: var(--bg-hover);
+}
+
+.report-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  flex: 1;
+}
+
+.report-file-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.report-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.report-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.report-type-badge {
+  color: var(--text-secondary);
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.format-tag {
+  font-size: 0.725rem;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .report-row {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+  .report-identity {
+    width: 100%;
+  }
+  .report-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .report-row {
+    padding: 12px;
+  }
+  .report-meta span:nth-child(3),
+  .report-meta span:nth-child(4),
+  .report-meta span:nth-child(5) {
+    display: none;
+  }
+}
